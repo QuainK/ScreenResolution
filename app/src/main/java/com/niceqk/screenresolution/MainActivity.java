@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         TextView renderContent = findViewById(R.id.render_resolution_content);
         TextView physicalContent = findViewById(R.id.physical_resolution_content);
         TextView screenContent = findViewById(R.id.screen_size_content);
+        TextView ppiContent = findViewById(R.id.ppi_content);
 
 
         // 获取屏幕信息
@@ -58,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         // [√(宽^2+高^2)] / DPI
         double screenSize = Math.sqrt(Math.pow(physicalX, 2) + Math.pow(physicalY, 2));
 
+        /* 屏幕像素密度 */
+        int ppi = dm.densityDpi;
 
         // 拼接字符串
         StringBuilder sb = new StringBuilder();
@@ -82,10 +85,17 @@ public class MainActivity extends AppCompatActivity {
             .append(" 英寸");
         String screenStr = sb.toString();
 
+        // 清空str
+        sb.setLength(0);
+        sb.append(ppi)
+            .append("ppi");
+        String ppiStr = sb.toString();
+
 
         // 更新结果到屏幕上
         renderContent.setText(String.format(getString(R.string.render_resolution_content), renderStr));
         physicalContent.setText(String.format(getString(R.string.physical_resolution_content), physicalStr));
         screenContent.setText(String.format(getString(R.string.screen_size_content), screenStr));
+        ppiContent.setText(String.format(getString(R.string.ppi_content), ppiStr));
     }
 }

@@ -41,7 +41,6 @@
         android:gravity="center"
         android:text="@string/physical_resolution_content" />
 
-
     <!-- 屏幕尺寸 -->
     <TextView
         android:id="@+id/screen_size_title"
@@ -58,5 +57,22 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/screen_size_content" />
+
+    <!-- 屏幕像素密度 -->
+    <TextView
+        android:id="@+id/ppi_title"
+        style="@style/Theme.ScreenResolution.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/ppi_title" />
+
+    <TextView
+        android:id="@+id/ppi_content"
+        style="@style/Theme.ScreenResolution.Content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ppi_content" />
 
 </LinearLayout>
