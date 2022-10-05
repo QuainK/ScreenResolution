@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Theme.ScreenResolution"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="0dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!-- 渲染分辨率 -->
+    <TextView
+        android:id="@+id/render_resolution_title"
+        style="@style/Theme.ScreenResolution.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center_horizontal"
+        android:text="@string/render_resolution_title" />
+
+    <TextView
+        android:id="@+id/render_resolution_content"
+        style="@style/Theme.ScreenResolution.Content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/render_resolution_content" />
+
+    <!-- 物理分辨率 -->
+    <TextView
+        android:id="@+id/physical_resolution_title"
+        style="@style/Theme.ScreenResolution.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/physical_resolution_title" />
+
+    <TextView
+        android:id="@+id/physical_resolution_content"
+        style="@style/Theme.ScreenResolution.Content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/physical_resolution_content" />
+
+
+    <!-- 屏幕尺寸 -->
+    <TextView
+        android:id="@+id/screen_size_title"
+        style="@style/Theme.ScreenResolution.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/screen_size_title" />
+
+    <TextView
+        android:id="@+id/screen_size_content"
+        style="@style/Theme.ScreenResolution.Content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/screen_size_content" />
+
+</LinearLayout>

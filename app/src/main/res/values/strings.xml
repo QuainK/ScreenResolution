@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">屏幕分辨率</string>
+    <string name="render_resolution_title">渲染分辨率</string>
+    <string name="render_resolution_content">%1$s</string>
+    <string name="physical_resolution_title">物理分辨率</string>
+    <string name="physical_resolution_content">%1$s</string>
+    <string name="screen_size_title">屏幕尺寸</string>
+    <string name="screen_size_content">%1$s</string>
+</resources>
