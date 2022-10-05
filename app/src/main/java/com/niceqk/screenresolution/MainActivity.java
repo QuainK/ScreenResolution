@@ -1,12 +1,11 @@
 package com.niceqk.screenresolution;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Point;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.view.Display;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
@@ -23,14 +22,14 @@ public class MainActivity extends AppCompatActivity {
      * 更新内容
      */
     private void updateTextView() {
-        // 获取页面控件
+        /* 获取页面控件 */
         TextView renderContent = findViewById(R.id.render_resolution_content);
         TextView physicalContent = findViewById(R.id.physical_resolution_content);
         TextView screenContent = findViewById(R.id.screen_size_content);
         TextView ppiContent = findViewById(R.id.ppi_content);
 
 
-        // 获取屏幕信息
+        /* 获取屏幕信息 */
         DisplayMetrics dm = getResources().getDisplayMetrics();
 
         /* 渲染分辨率（像素） */
@@ -56,45 +55,44 @@ public class MainActivity extends AppCompatActivity {
         float physicalY = renderY / dpiX;
 
         /* 屏幕尺寸（对角线长度） */
-        // [√(宽^2+高^2)] / DPI
+        // 物理宽高，勾股定理，对角线物理长度
         double screenSize = Math.sqrt(Math.pow(physicalX, 2) + Math.pow(physicalY, 2));
 
         /* 屏幕像素密度 */
         int ppi = dm.densityDpi;
 
-        // 拼接字符串
+        /* 转换成字符串 */
         StringBuilder sb = new StringBuilder();
 
-        sb.append(renderX)
-            .append("p × ")
-            .append(renderY)
-            .append("p");
-        String renderStr = sb.toString();
-
-        // 清空str
+        // 渲染
+        sb.append(renderX);
+        String renderXStr = sb.toString();
         sb.setLength(0);
-        sb.append(String.format(Locale.CHINA, "%.1f", physicalX))
-            .append(" 英寸 × ")
-            .append(String.format(Locale.CHINA, "%.1f", physicalY))
-            .append(" 英寸");
-        String physicalStr = sb.toString();
+        sb.append(renderY);
+        String renderYStr = sb.toString();
 
-        // 清空str
+        // 物理
         sb.setLength(0);
-        sb.append(String.format(Locale.CHINA, "%.1f", screenSize))
-            .append(" 英寸");
+        sb.append(String.format(Locale.CHINA, "%.1f", physicalX));
+        String physicalWidthStr = sb.toString();
+        sb.setLength(0);
+        sb.append(String.format(Locale.CHINA, "%.1f", physicalY));
+        String physicalHeightStr = sb.toString();
+
+        // 对角线
+        sb.setLength(0);
+        sb.append(String.format(Locale.CHINA, "%.1f", screenSize));
         String screenStr = sb.toString();
 
-        // 清空str
+        // 密度
         sb.setLength(0);
-        sb.append(ppi)
-            .append("ppi");
+        sb.append(ppi);
         String ppiStr = sb.toString();
 
 
-        // 更新结果到屏幕上
-        renderContent.setText(String.format(getString(R.string.render_resolution_content), renderStr));
-        physicalContent.setText(String.format(getString(R.string.physical_resolution_content), physicalStr));
+        /* 更新结果到屏幕上 */
+        renderContent.setText(String.format(getString(R.string.render_resolution_content), renderXStr, renderYStr));
+        physicalContent.setText(String.format(getString(R.string.physical_resolution_content), physicalWidthStr, physicalHeightStr));
         screenContent.setText(String.format(getString(R.string.screen_size_content), screenStr));
         ppiContent.setText(String.format(getString(R.string.ppi_content), ppiStr));
     }
