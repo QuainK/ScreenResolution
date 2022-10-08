@@ -8,4 +8,5 @@
     <string name="screen_size_content">%1$s 英寸</string>
     <string name="ppi_title">屏幕像素密度</string>
     <string name="ppi_content">%1$sppi</string>
+    <string name="copy_to_clipboard">复制到剪贴板</string>
 </resources>
