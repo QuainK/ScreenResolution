@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <!-- <style name="Theme.ScreenResolution" parent="Theme.MaterialComponents.DayNight.DarkActionBar"> -->
     <style name="Theme.ScreenResolution" parent="Theme.AppCompat.NoActionBar">
@@ -12,9 +12,9 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <!-- <item name="android:statusBarColor">?attr/colorPrimaryVariant</item> -->
-        <item name="android:statusBarColor">@color/main_yellow</item>
+        <item name="android:statusBarColor">@color/main_cyan</item>
         <!-- Customize your theme here. -->
-        <item name="android:background">@color/main_yellow</item>
+        <item name="android:background">@color/main_cyan</item>
         <item name="android:color">@color/main_white</item>
     </style>
 
