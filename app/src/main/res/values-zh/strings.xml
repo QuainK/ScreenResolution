@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">屏幕分辨率</string>
+    <string name="render_resolution_title">渲染分辨率</string>
+    <string name="physical_resolution_title">物理分辨率</string>
+    <string name="physical_resolution_content">%1$s 英寸 × %2$s 英寸</string>
+    <string name="screen_size_title">屏幕尺寸</string>
+    <string name="screen_size_content">%1$s 英寸</string>
+    <string name="ppi_title">屏幕像素密度</string>
+    <string name="ppi_content">%1$sppi</string>
+    <string name="render_resolution_content" translatable="false">%1$sp × %2$sp</string>
+    <string name="copy_to_clipboard">复制到剪贴板</string>
+    <string name="copy_successfully">复制成功</string>
+    <string name="copy_failed">复制失败</string>
+</resources>

@@ -1,13 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Screen Resolution</string>
     <string name="render_resolution_title">Render Resolution</string>
-    <string name="render_resolution_content">%1$sp × %2$sp</string>
     <string name="physical_resolution_title">Physical Resolution</string>
     <string name="physical_resolution_content">%1$s inches × %2$s inches</string>
     <string name="screen_size_title">Screen Size</string>
     <string name="screen_size_content">%1$s inches</string>
     <string name="ppi_title">Screen Pixel Density</string>
     <string name="ppi_content">%1$sppi</string>
+    <string name="render_resolution_content" translatable="false">%1$sp × %2$sp</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="copy_successfully">Copy successfully</string>
     <string name="copy_failed">Copy failed</string>

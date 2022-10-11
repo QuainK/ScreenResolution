@@ -149,10 +149,10 @@ public class MainActivity extends AppCompatActivity {
             // 写入剪贴板
             cm.setPrimaryClip(cd);
             // toast提示写入成功
-            Toast.makeText(MainActivity.this, "复制成功", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, getString(R.string.copy_successfully), Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             // toast提示写入失败
-            Toast.makeText(MainActivity.this, "复制失败", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, getString(R.string.copy_failed), Toast.LENGTH_SHORT).show();
             Log.e("copy to clipboard", "failed");
         }
     }
